@@ -1,0 +1,42 @@
+<!-- Created by Kyle Murphy for Rock Road BBQ Battle 3/17/2019 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rock Road BBQ Battle</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" type="text/css" href="../css/global-styles.css" />
+    <link rel="stylesheet" type="text/css" href="../css/entry-form-css.css" />
+		<link rel='stylesheet' id='google-font-roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto' type='text/css' media='all' />
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<nav>
+					<ul class="navbar">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="">Teams</a></li>
+						<li><a href="">Results</a></li>
+						<li><a href="">Gallery</a></li>
+						<li><a href="EntryForm.html">Entry Form</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<h1>Entry Form</h1>
+        <div id="pdf-container">
+					<script src="/js/pdfobject.js"></script>
+					<script>PDFObject.embed("../resources/entryForm.pdf", "#pdf-container");</script>
+
+				  <embed src="../resources/entryForm.pdf" type="application/pdf" width="80%" height="100%">
+        </div>
+			</main>
+			<hr />
+			<footer>
+				<!--#include file="footer.html" -->
+			</footer>
+		</div>
+	</body>
+</html>

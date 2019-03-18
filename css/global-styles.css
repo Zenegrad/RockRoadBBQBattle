@@ -1,0 +1,82 @@
+/* Created by Kyle Murphy for Rock Road BBQ Battle 3/16/2019 */
+
+/* Navbar stylization */
+nav
+{
+	font-size: 1.8em;
+	font-weight: 100;
+  list-style-type: none;
+  display: inline-block;
+  width: 100%;
+  background-color: #0e0e0e;
+
+}
+
+.navbar{
+  list-style-type: none;
+  text-align: center;
+
+}
+
+ul.navbar
+{
+    padding: 0px;
+    margin: 0em;
+}
+
+.navbar li
+{
+  display:inline;
+  text-align: center;
+  color:white;
+
+}
+
+.navbar a
+{
+  display: inline-block;
+  text-align:center;
+  padding: .5em;
+  margin-left: .25em;
+  margin-right: .25em;
+  text-decoration: none;
+  color:white;
+
+}
+
+.navbar li a:visited
+{
+  color: white;
+}
+
+.navbar li a:hover
+{
+  background-color: #b22400;
+  text-decoration: underline;
+}
+
+/* Main Page Styles */
+body
+{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: black;
+    font-family: Roboto, "Times New Roman", Times, serif
+}
+
+hr
+{
+ color:  #b22400;	
+}
+
+p
+{
+  color: white;
+}
+
+h1
+{
+  color: white;
+  text-align: center;
+  font-size: 4em;
+}
