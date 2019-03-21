@@ -5,6 +5,7 @@
 	<head>
 		<title>Rock Road BBQ Battle</title>
 		<meta charset="UTF-8" />
+		<meta name="google-site-verification" content="XTwMR_r2wdM75WyTs0DemNxCNeBghQ88-YGKBmlgzFw" />
 		<link rel="stylesheet" type="text/css" href="../css/global-styles.css" />
 		<link rel='stylesheet' id='google-font-roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto' type='text/css' media='all' />
 	</head>
@@ -25,8 +26,44 @@
 
 			<main>
 				<h1>Rock Road BBQ Battle</h1>
+				<hr/>
+
+				<script>
+					var i = 0; 			// Start Point
+					var images = [];	// Images Array
+					var time = 3000;	// Time Between Switch
+
+					// Image List
+					images[0] = "";
+					images[1] = "";
+					images[2] = "";
+					images[3] = "";
+
+					// Change Image
+					function changeImg()
+					{
+						document.slide.src = images[i];
+						// Check If Index Is Under Max
+						if(i < images.length - 1)
+						{
+							// Add 1 to Index
+							i++;
+						}
+						else
+						{
+							// Reset Back To O
+							i = 0;
+						}
+						// Run function every x seconds
+						setTimeout("changeImg()", time);
+					}
+
+					// Run function when page loads
+					window.onload=changeImg;
+				</script>
+
 			</main>
-			<hr/>
+
 			<footer>
 				<!--#include file="footer.html" -->
 			</footer>

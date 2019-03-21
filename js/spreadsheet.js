@@ -4,6 +4,7 @@ const {google} = require('googleapis');
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+
 // The file token.json stores the user's access and refresh tokens, and is
 // created automatically when the authorization flow completes for the first
 // time.
@@ -73,14 +74,17 @@ function getNewToken(oAuth2Client, callback) {
  */
 function listMajors(auth) {
   const sheets = google.sheets({version: 'v4', auth});
-  sheets.spreadsheets.values.get({
-    spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-    range: 'Class Data!A2:E',
-  }, (err, res) => {
+  sheets.spreadsheets.values.get(
+    {
+      spreadsheetId: '1NfaiONBqD7dzplzvofUPp70s_hLIEH4b6FgdWQPZriY',
+      range: 'Data!A2:E',
+    }, (err, res) => {
+
     if (err) return console.log('The API returned an error: ' + err);
+
     const rows = res.data.values;
     if (rows.length) {
-      console.log('Name, Major:');
+      console.log('Team Name, Major:');
       // Print columns A and E, which correspond to indices 0 and 4.
       rows.map((row) => {
         console.log(`${row[0]}, ${row[4]}`);

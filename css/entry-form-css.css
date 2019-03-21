@@ -1,11 +1,9 @@
 body
 {
-text-align: center;
+  text-align: center;
 }
 
 div#pdf-container
 {
-
-height: 60em;
-
+  height: 60em;
 }
