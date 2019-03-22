@@ -1,0 +1,203 @@
+/* Created by Chase Roth/Reiss on 3/21/2019 */
+
+
+/* For Mobile Phones */
+.nav-main {
+  width: 100%;
+  height: 120px;
+  background-color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1000;
+}
+nav h1 {
+  width: 87%;
+  margin: 0;
+  background-color: #444;
+  color: white;
+  text-align: center;
+  font-size: 4.5em;
+  line-height: 120px;
+  white-space: nowrap;
+}
+
+/* Button Styles */
+.btn-toggle-nav {
+  margin: 0;
+  width: 13%;
+  height: 100%;
+  background-color: #F98F39;
+  /* Referencing the image for the hamburger menu */
+  background-image: url("../resources/menu.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  cursor: pointer;
+}
+.btn-toggle-nav:hover {
+  opacity: 0.5;
+}
+
+/* Sidebar Navagation Styles*/
+.nav-sidebar {
+  position: fixed;
+  width: 0;
+  height: 50%;
+  background-color: #444;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-sidebar ul {
+  padding: 0 5%;
+  list-style: none;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.nav-sidebar ul li {
+  list-style: none;
+}
+
+.nav-sidebar ul li a {
+  margin-top: 5%;
+  padding: 5% 2% 5%;
+  display: block;
+  text-decoration: none;
+  color: #0f1215;
+  font-size: 2em;
+  text-align: center;
+  background-color: #FFF;
+  white-space: nowrap;
+}
+
+
+
+/* For Desktops
+@media (min-width: 640px) {
+  nav
+  {
+    font-size: 1.8em;
+    font-weight: 100;
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+    background-color: #0e0e0e;
+  }
+
+  .navbar{
+    list-style-type: none;
+    text-align: center;
+  }
+
+  ul.navbar
+  {
+      padding: 0px;
+      margin: 0em;
+  }
+
+  .navbar li
+  {
+    display:inline;
+    text-align: center;
+    color:white;
+  }
+
+  .navbar a
+  {
+    display: inline-block;
+    text-align:center;
+    padding: .5em;
+    margin-left: .25em;
+    margin-right: .25em;
+    text-decoration: none;
+    color:white;
+  }
+
+  .navbar li a:visited
+  {
+    color: white;
+  }
+
+  .navbar li a:hover
+  {
+    background-color: #b22400;
+    text-decoration: underline;
+  }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* If want nav bar these styles:
+  .nav-main ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 15px;
+}
+
+.nav-main ul li {
+  list-style: none;
+  line-height: 2;
+}
+
+.nav-main ul li a{
+  display: block;
+  height: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  color: #111;
+}
+*/
+
+
+
+
+/* OLD NAV STYLES */
+/* For Mobile Phones
+@media (min-width: 640px) {
+  nav div {
+    width: 98%;
+    height: 50px;
+    background-color: black;
+    margin: 6px 0;
+    border-radius: 50%
+  }
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 50px;
+    height: 7px;
+    background-color: #FFF;
+    margin: 7px 0;
+    transition: 0.4s;
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+  }
+}
+*/

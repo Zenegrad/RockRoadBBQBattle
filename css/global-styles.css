@@ -1,0 +1,23 @@
+/* Created by Kyle Murphy for Rock Road BBQ Battle 3/16/2019 */
+/* Modified by your boi Chase Roth/Reiss */
+
+/* For Mobile Phones */
+@media (min-width: 640px) {
+  body {
+    margin: 0;
+    font-family: Roboto, "Times New Roman", Times, serif
+  }
+	p {
+		color: white;
+  }
+}
+
+/* For DeskTop */
+ Main Page Styles For Desktop
+@media (max-width: 640px) {
+	body
+	{
+	    margin-left: 10%;
+	    margin-right: 10%;
+	}
+}
