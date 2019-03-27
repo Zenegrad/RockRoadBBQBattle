@@ -2,7 +2,7 @@ const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
 
-// If modifying these scopes, delete token.json.
+//DO NOT MODIFY
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
 
 // The file token.json stores the user's access and refresh tokens, and is
@@ -79,6 +79,7 @@ function listTeams(auth) {
 
     if (err) return console.log('The API returned an error: ' + err);
 
+    //Store data recieved into rows
     const rows = res.data.values;
     if (rows.length) {
 
