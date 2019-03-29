@@ -1,6 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
 const {google} = require('googleapis');
+var path = require('path');
 
 // If modifying these scopes, delete token.json.
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
@@ -14,7 +15,7 @@ const TOKEN_PATH = 'token.json';
 fs.readFile('credentials.json', (err, content) => {
   if (err) return console.log('Error loading client secret file:', err);
   // Authorize a client with credentials, then call the Google Sheets API.
-  authorize(JSON.parse(content), listMajors);
+  authorize(JSON.parse(content), listTeams);
 });
 
 /**
@@ -72,25 +73,46 @@ function getNewToken(oAuth2Client, callback) {
  * @see https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
  * @param {google.auth.OAuth2} auth The authenticated Google OAuth client.
  */
-function listMajors(auth) {
+
+function listTeams(auth){
   const sheets = google.sheets({version: 'v4', auth});
   sheets.spreadsheets.values.get(
     {
       spreadsheetId: '1NfaiONBqD7dzplzvofUPp70s_hLIEH4b6FgdWQPZriY',
-      range: 'Data!A2:E',
+      range: 'testingsheet!A:A',
+      majorDimension: "ROWS",
     }, (err, res) => {
 
     if (err) return console.log('The API returned an error: ' + err);
 
+    //JSON string that will be converted
+    var jsonList = '{ "teams" : [';
+
     const rows = res.data.values;
     if (rows.length) {
-      console.log('Team Name, Major:');
-      // Print columns A and E, which correspond to indices 0 and 4.
+      var counter = 0;
+      //loop through and concatinate teams into a json string to be converted
       rows.map((row) => {
-        console.log(`${row[0]}, ${row[4]}`);
+        counter++;
+        console.log(counter + ' ' + rows.length);
+        if(`${row[0]}` === "Team Name")
+        {
+
+        }
+        else if(counter === (rows.length)) {
+          jsonList += '{ "teamName":' + `"${row[0]}"` + '}]}';
+        }
+        else
+        {
+          jsonList += '{ "teamName":' + `"${row[0]}"` + '},'
+        }
+
       });
     } else {
       console.log('No data found.');
     }
+    var json = JSON.parse(jsonList);
+    fs.writeFileSync(path.resolve(__dirname, './sheet.json'), 'teamsJSON = ' + JSON.stringify(json));
+    console.log(json);
   });
 }

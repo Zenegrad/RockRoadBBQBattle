@@ -1,0 +1,65 @@
+<!-- Created by Kyle Murphy for Rock Road BBQ Battle 3/16/2019 -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rock Road BBQ Battle</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="google-site-verification" content="XTwMR_r2wdM75WyTs0DemNxCNeBghQ88-YGKBmlgzFw" />
+		<link rel="stylesheet" type="text/css" href="../css/global-styles.css" />
+		<link rel='stylesheet' id='google-font-roboto-css'  href='https://fonts.googleapis.com/css?family=Roboto' type='text/css' media='all' />
+		<link rel="stylesheet" type="text/css" href="../css/team-styles.css"/>
+		<link rel="stylesheet" href="">
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  </head>
+	<body onload="load()">
+		<div id="container">
+			<header>
+				<nav>
+					<ul class="navbar">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="teams.html">Teams</a></li>
+						<li><a href="">Results</a></li>
+						<li><a href="">Gallery</a></li>
+						<li><a href="EntryForm.html">Entry Form</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<main>
+				<h1>Rock Road BBQ Battle 2019 Teams</h1>
+				<script src="../js/sheet.json"></script>
+				<script type="text/javascript">
+				  function load(){
+						//get the table
+						var teamTable = window.document.getElementById("teamsTable");
+						//get length of json teams object
+						var jsonLength = Object.keys(teamsJSON.teams).length;
+
+						//loop through json obj and insert team names into teamTable
+						for (var i = 0; i < jsonLength; i++) {
+				        var row = teamTable.insertRow(1);
+								var cell = row.insertCell(0);
+								cell.innerHTML = teamsJSON.teams[i].teamName;
+								console.log(teamsJSON.teams[i].teamName);
+				    }
+				  }
+				</script>
+
+        <div id="tableContainer">
+          <table id="teamsTable">
+            <th></th>
+          </table>
+        </div>
+			</main>
+
+			<footer>
+				<!--#include file="footer.html" -->
+			</footer>
+		</div>
+
+	</body>
+</html>

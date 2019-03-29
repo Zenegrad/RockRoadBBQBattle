@@ -5,5 +5,5 @@ var caption;
 
 function initImages(){
   slideIndex = 0;
-  slides =
+  slides = 0;
 }

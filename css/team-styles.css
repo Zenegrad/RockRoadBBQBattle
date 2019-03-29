@@ -1,0 +1,12 @@
+table{
+  color:white;
+  text-align: center;
+  font-size: 2.5em;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+td
+{
+  padding-bottom: 35px;
+}
